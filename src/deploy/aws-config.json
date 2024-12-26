@@ -1,0 +1,21 @@
+{
+  "name": "codeant-ai",
+  "type": "webapp",
+  "environment": {
+    "VITE_API_URL": "https://api.codeant.ai",
+    "VITE_APP_ENV": "production"
+  },
+  "build": {
+    "command": "npm run build",
+    "output": "dist"
+  },
+  "hosting": {
+    "service": "s3",
+    "bucket": "codeant-ai-webapp",
+    "region": "us-east-1",
+    "distribution": {
+      "enabled": true,
+      "priceClass": "PriceClass_100"
+    }
+  }
+}
